@@ -21,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
+        //data is reloaded upon re-opening application
         NotificationCenter.default.post(name: NSNotification.Name.UIApplicationDidBecomeActive, object:nil)
     }
 }

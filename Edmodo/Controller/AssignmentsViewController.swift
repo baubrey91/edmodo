@@ -14,11 +14,16 @@ class AssignmentsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
-    fileprivate var assignments = [Assignment]()
-    fileprivate var noInternet = "Please Check Your internet connection"
+    fileprivate var assignments = [Assignment]() {
+        didSet {
+            tableView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 120
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(getAssignments),
                                                name: NSNotification.Name.UIApplicationDidBecomeActive,
@@ -26,10 +31,19 @@ class AssignmentsViewController: UIViewController {
         getAssignments()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "assignmentDetailSegue" {
+            let vc = segue.destination as! AssignmentDetailViewController
+            let indexPath = tableView.indexPath(for: sender as! AssignmentTableViewCell)!
+            vc.assignment = assignments[indexPath.row]
+        }
+    }
+    
     func getAssignments() {
         if (Reachability.isConnectedToNetwork()) {
             activityIndicator.startAnimating()
-            EdmodoClient.sharedInstance.callAPI(endPoint: .getAssignments(token: "12e7eaf1625004b7341b6d681fa3a7c1c551b5300cf7f7f3a02010e99c84695d"),
+            EdmodoClient.sharedInstance.callAPI(endPoint: .getAssignments(token: EdmodoClient.sharedInstance.token),
+                                                parameters: ["page":1, "per_page":10],
                                                 completionHandler: {
                                                     json in DispatchQueue.main.async {
                                                         self.assignments = Assignment.assignments(array: json as! [payload])
@@ -39,7 +53,7 @@ class AssignmentsViewController: UIViewController {
             })
         }
         else {
-            self.navigationItem.prompt = noInternet
+            self.navigationItem.prompt = "Please Check Your internet connection"
         }
     }
 }
@@ -55,3 +69,4 @@ extension AssignmentsViewController: UITableViewDelegate, UITableViewDataSource 
         return cell
     }
 }
+

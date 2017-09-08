@@ -20,6 +20,8 @@
 		CA67A6B61F621530002FCDE6 /* AssignmentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA67A6B51F621530002FCDE6 /* AssignmentDetailViewController.swift */; };
 		CA67A6B81F621807002FCDE6 /* AssignmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA67A6B71F621807002FCDE6 /* AssignmentTableViewCell.swift */; };
 		CA67A6BA1F621C7F002FCDE6 /* CreatorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA67A6B91F621C7F002FCDE6 /* CreatorTableViewCell.swift */; };
+		CA67A6BC1F6334F7002FCDE6 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA67A6BB1F6334F7002FCDE6 /* CustomImageView.swift */; };
+		CA67A6BE1F633655002FCDE6 /* SubmissionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA67A6BD1F633655002FCDE6 /* SubmissionDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		CA67A6B51F621530002FCDE6 /* AssignmentDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentDetailViewController.swift; sourceTree = "<group>"; };
 		CA67A6B71F621807002FCDE6 /* AssignmentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentTableViewCell.swift; sourceTree = "<group>"; };
 		CA67A6B91F621C7F002FCDE6 /* CreatorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatorTableViewCell.swift; sourceTree = "<group>"; };
+		CA67A6BB1F6334F7002FCDE6 /* CustomImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
+		CA67A6BD1F633655002FCDE6 /* SubmissionDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmissionDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,7 @@
 				CA67A6B31F62148D002FCDE6 /* AssignmentsViewController.swift */,
 				CA67A6B51F621530002FCDE6 /* AssignmentDetailViewController.swift */,
 				3966BB8A1F625D210026F2AF /* NewAssignmentViewController.swift */,
+				CA67A6BD1F633655002FCDE6 /* SubmissionDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -116,6 +121,7 @@
 			children = (
 				CA67A6B71F621807002FCDE6 /* AssignmentTableViewCell.swift */,
 				CA67A6B91F621C7F002FCDE6 /* CreatorTableViewCell.swift */,
+				CA67A6BB1F6334F7002FCDE6 /* CustomImageView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -194,12 +200,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA67A6BA1F621C7F002FCDE6 /* CreatorTableViewCell.swift in Sources */,
+				CA67A6BE1F633655002FCDE6 /* SubmissionDetailViewController.swift in Sources */,
 				CA67A6B61F621530002FCDE6 /* AssignmentDetailViewController.swift in Sources */,
 				CA67A6B01F62076D002FCDE6 /* Submission.swift in Sources */,
 				CA67A6AE1F620764002FCDE6 /* Assignment.swift in Sources */,
 				CA67A6B81F621807002FCDE6 /* AssignmentTableViewCell.swift in Sources */,
 				3966BB891F625A3B0026F2AF /* Reachability.swift in Sources */,
 				3966BB8B1F625D210026F2AF /* NewAssignmentViewController.swift in Sources */,
+				CA67A6BC1F6334F7002FCDE6 /* CustomImageView.swift in Sources */,
 				CA67A6901F6205D6002FCDE6 /* AppDelegate.swift in Sources */,
 				CA67A6AB1F620659002FCDE6 /* EdmodoClient.swift in Sources */,
 				CA67A6B41F62148D002FCDE6 /* AssignmentsViewController.swift in Sources */,

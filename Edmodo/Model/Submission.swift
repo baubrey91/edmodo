@@ -20,6 +20,10 @@ class Submission {
         self.creator = Creator(jsonDic["creator"] as! payload)
     }
     
+    fileprivate func formatDate(_ date: String) {
+        
+    }
+    
     class func submissions(array: [payload]) -> [Submission] {
         var submissions = [Submission]()
         for jsonDic in array {
@@ -34,11 +38,13 @@ class Creator {
     
     var firstName: String
     var lastName: String
+    var id: Int
     var avatar: String?
     
     init(_ dic: payload) {
         self.firstName = dic["first_name"] as! String
         self.lastName = dic["last_name"] as! String
+        self.id = dic["id"] as! Int
         if let avatar = dic["avatars"] as? payload {
             self.avatar = avatar["large"] as? String
         }

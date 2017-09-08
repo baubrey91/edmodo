@@ -11,28 +11,47 @@ import UIKit
 
 class AssignmentDetailViewController: UIViewController {
     
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var descriptionTextView: UITextView!
+    
+    var assignment: Assignment?
+    
     var submissions = [Submission]()
     
     override func viewDidLoad() {
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 120
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
+        descriptionTextView.text = assignment?.description
         getSubmissions()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! SubmissionDetailViewController
+        let indexPath = tableView.indexPath(for: sender as! CreatorTableViewCell)!
+        vc.submission = submissions[indexPath.row]
     }
     
     func getSubmissions() {
         if (Reachability.isConnectedToNetwork()) {
             //activityIndicator.startAnimating()
-            EdmodoClient.sharedInstance.callAPI(endPoint: .getSubmissions(assignmentID: "24800159",
-                                                                          creatorID: "73240721",
-                                                                          token: "12e7eaf1625004b7341b6d681fa3a7c1c551b5300cf7f7f3a02010e99c84695d"),
+            EdmodoClient.sharedInstance.callAPI(endPoint: .getSubmissions(assignmentID: String(describing: assignment!.id),
+                                                                          creatorID: String(describing: assignment!.creator.id),
+                                                                          token: EdmodoClient.sharedInstance.token),
+                                                parameters: ["page":1, "per_page":10],
                                                 completionHandler: {
                                                     json in DispatchQueue.main.async {
                                                         self.submissions = Submission.submissions(array: json as! [payload])
-                                                        //self.tableView.reloadData()
+                                                        self.tableView.reloadData()
                                                         //self.activityIndicator.stopAnimating()
                                                     }
             })
         }
         else {
-            self.navigationItem.prompt = "Check your internet"
+            self.navigationItem.prompt = "Please Check Your internet connection"
         }
         
     }

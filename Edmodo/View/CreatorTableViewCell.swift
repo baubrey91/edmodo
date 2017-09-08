@@ -12,11 +12,15 @@ class CreatorTableViewCell: UITableViewCell {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var turnedInLabel: UILabel!
-    @IBOutlet weak var avaterImage: UIImageView!
+    @IBOutlet weak var avaterImage: CustomImageView!
     
     var submission: Submission? {
         didSet{
-            self.nameLabel.text = submission?.submittedAt
+            self.nameLabel.text = submission?.creator.firstName
+            self.turnedInLabel.text = submission?.submittedAt.formatDate(due: false)
+            if let imgString = submission?.creator.avatar {
+                avaterImage.loadImage(urlString: imgString)
+            }
         }
     }
 }
