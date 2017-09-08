@@ -13,11 +13,15 @@ class Assignment  {
     var title: String
     var description: String
     var dueAt: String
+    var id: Int
+    var creator: Creator
     
     init(_ jsonDic: payload) {
         self.title = jsonDic["title"] as! String
         self.description = jsonDic["description"] as! String
         self.dueAt = jsonDic["due_at"] as! String
+        self.id = jsonDic["id"] as! Int
+        self.creator = Creator(jsonDic["creator"] as! payload)
     }
     
     class func assignments(array: [payload]) -> [Assignment] {

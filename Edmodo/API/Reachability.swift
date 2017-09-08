@@ -8,7 +8,6 @@
 
 import SystemConfiguration
 
-
 //Stole this from stack overflow - https://stackoverflow.com/questions/30743408/check-for-internet-connection-with-swift
 public class Reachability {
     

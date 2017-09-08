@@ -29,10 +29,11 @@ class AssignmentsViewController: UIViewController {
     func getAssignments() {
         if (Reachability.isConnectedToNetwork()) {
             activityIndicator.startAnimating()
-            EdmodoClient.sharedInstance.callAPI(endPoint: .getAssignments,
+            EdmodoClient.sharedInstance.callAPI(endPoint: .getAssignments(token: "12e7eaf1625004b7341b6d681fa3a7c1c551b5300cf7f7f3a02010e99c84695d"),
                                                 completionHandler: {
                                                     json in DispatchQueue.main.async {
                                                         self.assignments = Assignment.assignments(array: json as! [payload])
+                                                        self.tableView.reloadData()
                                                         self.activityIndicator.stopAnimating()
                                                     }
             })
