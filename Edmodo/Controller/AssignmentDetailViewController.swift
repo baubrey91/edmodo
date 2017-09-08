@@ -11,8 +11,6 @@ import UIKit
 
 class AssignmentDetailViewController: UIViewController {
     
-
-    
 }
 
 extension AssignmentDetailViewController: UITableViewDataSource, UITableViewDelegate {

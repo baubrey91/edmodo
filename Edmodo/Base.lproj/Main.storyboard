@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--New Assignment View Controller-->
         <scene sceneID="Z95-15-nSX">
             <objects>
-                <viewController id="GIs-bS-A0b" sceneMemberID="viewController">
+                <viewController id="GIs-bS-A0b" customClass="NewAssignmentViewController" customModule="Edmodo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rbi-75-VQy"/>
                         <viewControllerLayoutGuide type="bottom" id="djl-Id-9TS"/>
@@ -22,10 +22,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="x8S-BI-reJ">
+                        <barButtonItem key="leftBarButtonItem" title="Close" id="rYn-C9-faA">
+                            <connections>
+                                <action selector="onCloseButton:" destination="GIs-bS-A0b" id="Z9v-1Y-jBL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JLb-vn-YgB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1833" y="-559"/>
+            <point key="canvasLocation" x="2916" y="-581.55922038980509"/>
         </scene>
         <!--Assignments-->
         <scene sceneID="tne-QT-ifu">
@@ -48,7 +55,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="78"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BtR-G5-nZD" id="Z0A-2J-6tV">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="78"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="77.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The Solar System" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pqc-Dg-2h0">
@@ -79,16 +86,28 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="QMe-e7-2Wg"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="gZA-h8-tw7">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                <color key="color" red="0.2667404115" green="0.57699573039999996" blue="0.77672272919999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="gZA-h8-tw7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4HV-hc-kmj"/>
+                            <constraint firstItem="gZA-h8-tw7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Fl7-Fu-nth"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Assignments" id="IQB-DD-cog">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="aZb-S9-mE1">
                             <connections>
-                                <segue destination="GIs-bS-A0b" kind="presentation" id="HtL-YZ-bI1"/>
+                                <segue destination="1WF-cO-ZIz" kind="presentation" id="HtL-YZ-bI1"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="activityIndicator" destination="gZA-h8-tw7" id="jdW-ss-wUi"/>
+                        <outlet property="tableView" destination="azT-Zq-dAK" id="aMP-V1-IKa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -115,7 +134,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Rxp-4O-maa" id="CX3-gR-IJD">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dvC-Nf-cmb">
@@ -182,7 +201,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mh9-Xx-ErF" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="t1c-0M-iyy">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="t1c-0M-iyy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -195,6 +214,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YQa-3V-x84" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dEu-hP-M3j">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1WF-cO-ZIz" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3tM-iY-pLb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="GIs-bS-A0b" kind="relationship" relationship="rootViewController" id="BLv-61-7pu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aru-9f-7If" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1976.8" y="-581.55922038980509"/>
         </scene>
     </scenes>
 </document>

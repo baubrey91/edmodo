@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3966BB891F625A3B0026F2AF /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3966BB881F625A3B0026F2AF /* Reachability.swift */; };
+		3966BB8B1F625D210026F2AF /* NewAssignmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3966BB8A1F625D210026F2AF /* NewAssignmentViewController.swift */; };
 		CA67A6901F6205D6002FCDE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA67A68F1F6205D6002FCDE6 /* AppDelegate.swift */; };
 		CA67A6951F6205D6002FCDE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA67A6931F6205D6002FCDE6 /* Main.storyboard */; };
 		CA67A6971F6205D6002FCDE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA67A6961F6205D6002FCDE6 /* Assets.xcassets */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3966BB881F625A3B0026F2AF /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		3966BB8A1F625D210026F2AF /* NewAssignmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewAssignmentViewController.swift; sourceTree = "<group>"; };
 		CA67A68C1F6205D6002FCDE6 /* Edmodo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Edmodo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA67A68F1F6205D6002FCDE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA67A6941F6205D6002FCDE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -83,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				CA67A6AA1F620659002FCDE6 /* EdmodoClient.swift */,
+				3966BB881F625A3B0026F2AF /* Reachability.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -101,6 +106,7 @@
 			children = (
 				CA67A6B31F62148D002FCDE6 /* AssignmentsViewController.swift */,
 				CA67A6B51F621530002FCDE6 /* AssignmentDetailViewController.swift */,
+				3966BB8A1F625D210026F2AF /* NewAssignmentViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -192,6 +198,8 @@
 				CA67A6B01F62076D002FCDE6 /* Submission.swift in Sources */,
 				CA67A6AE1F620764002FCDE6 /* Assignment.swift in Sources */,
 				CA67A6B81F621807002FCDE6 /* AssignmentTableViewCell.swift in Sources */,
+				3966BB891F625A3B0026F2AF /* Reachability.swift in Sources */,
+				3966BB8B1F625D210026F2AF /* NewAssignmentViewController.swift in Sources */,
 				CA67A6901F6205D6002FCDE6 /* AppDelegate.swift in Sources */,
 				CA67A6AB1F620659002FCDE6 /* EdmodoClient.swift in Sources */,
 				CA67A6B41F62148D002FCDE6 /* AssignmentsViewController.swift in Sources */,
@@ -358,6 +366,7 @@
 				CA67A6A01F6205D6002FCDE6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
