@@ -9,7 +9,6 @@
 import Foundation
 
 class Submission {
-    
     var content: String
     var submittedAt: String
     var creator: Creator
@@ -18,10 +17,6 @@ class Submission {
         self.content = jsonDic["content"] as! String
         self.submittedAt = jsonDic["submitted_at"] as! String
         self.creator = Creator(jsonDic["creator"] as! payload)
-    }
-    
-    fileprivate func formatDate(_ date: String) {
-        
     }
     
     class func submissions(array: [payload]) -> [Submission] {
@@ -35,7 +30,6 @@ class Submission {
 }
 
 class Creator {
-    
     var firstName: String
     var lastName: String
     var id: Int

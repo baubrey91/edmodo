@@ -17,9 +17,10 @@ class SubmissionDetailViewController: UIViewController {
     @IBOutlet weak var submissionDetails: UITextView!
     
     var submission: Submission?
+    var navTitle: String?
     
     override func viewWillAppear(_ animated: Bool) {
-        
+        self.title = navTitle
         creatorName.text = submission?.creator.firstName
         createdDate.text = submission?.submittedAt.formatDate(due: false)
         submissionDetails.text = submission?.content

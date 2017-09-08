@@ -9,7 +9,6 @@
 import Foundation
 
 class Assignment  {
-    
     var title: String
     var description: String
     var dueAt: String

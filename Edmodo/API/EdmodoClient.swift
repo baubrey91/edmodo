@@ -31,7 +31,6 @@ enum Endpoint {
 }
 
 class EdmodoClient {
-    
     var token: String!
     
     static let sharedInstance = EdmodoClient(token: accessToken)

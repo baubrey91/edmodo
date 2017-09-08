@@ -12,7 +12,7 @@ import UIKit
 class AssignmentDetailViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var descriptionTextView: UITextView!
+    @IBOutlet weak var descriptionLabel: UILabel!
     
     var assignment: Assignment?
     
@@ -25,7 +25,8 @@ class AssignmentDetailViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         tableView.reloadData()
-        descriptionTextView.text = assignment?.description
+        self.title = assignment?.title
+        descriptionLabel.text = assignment?.description
         getSubmissions()
     }
     
@@ -33,6 +34,7 @@ class AssignmentDetailViewController: UIViewController {
         let vc = segue.destination as! SubmissionDetailViewController
         let indexPath = tableView.indexPath(for: sender as! CreatorTableViewCell)!
         vc.submission = submissions[indexPath.row]
+        vc.navTitle = assignment?.title
     }
     
     func getSubmissions() {

@@ -14,7 +14,6 @@ let imageCache = NSCache<AnyObject, AnyObject>()
 
 class CustomImageView: UIImageView {
     
-    
     fileprivate var imageUrlString: String?
     func loadImage(urlString: String) {
         
