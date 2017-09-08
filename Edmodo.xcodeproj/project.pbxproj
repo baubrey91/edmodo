@@ -1,0 +1,365 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CA67A6901F6205D6002FCDE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA67A68F1F6205D6002FCDE6 /* AppDelegate.swift */; };
+		CA67A6951F6205D6002FCDE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA67A6931F6205D6002FCDE6 /* Main.storyboard */; };
+		CA67A6971F6205D6002FCDE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA67A6961F6205D6002FCDE6 /* Assets.xcassets */; };
+		CA67A69A1F6205D6002FCDE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA67A6981F6205D6002FCDE6 /* LaunchScreen.storyboard */; };
+		CA67A6AB1F620659002FCDE6 /* EdmodoClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA67A6AA1F620659002FCDE6 /* EdmodoClient.swift */; };
+		CA67A6AE1F620764002FCDE6 /* Assignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA67A6AD1F620764002FCDE6 /* Assignment.swift */; };
+		CA67A6B01F62076D002FCDE6 /* Submission.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA67A6AF1F62076D002FCDE6 /* Submission.swift */; };
+		CA67A6B41F62148D002FCDE6 /* AssignmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA67A6B31F62148D002FCDE6 /* AssignmentsViewController.swift */; };
+		CA67A6B61F621530002FCDE6 /* AssignmentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA67A6B51F621530002FCDE6 /* AssignmentDetailViewController.swift */; };
+		CA67A6B81F621807002FCDE6 /* AssignmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA67A6B71F621807002FCDE6 /* AssignmentTableViewCell.swift */; };
+		CA67A6BA1F621C7F002FCDE6 /* CreatorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA67A6B91F621C7F002FCDE6 /* CreatorTableViewCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CA67A68C1F6205D6002FCDE6 /* Edmodo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Edmodo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA67A68F1F6205D6002FCDE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CA67A6941F6205D6002FCDE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CA67A6961F6205D6002FCDE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CA67A6991F6205D6002FCDE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CA67A69B1F6205D6002FCDE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA67A6AA1F620659002FCDE6 /* EdmodoClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EdmodoClient.swift; sourceTree = "<group>"; };
+		CA67A6AD1F620764002FCDE6 /* Assignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assignment.swift; sourceTree = "<group>"; };
+		CA67A6AF1F62076D002FCDE6 /* Submission.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Submission.swift; sourceTree = "<group>"; };
+		CA67A6B31F62148D002FCDE6 /* AssignmentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentsViewController.swift; sourceTree = "<group>"; };
+		CA67A6B51F621530002FCDE6 /* AssignmentDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentDetailViewController.swift; sourceTree = "<group>"; };
+		CA67A6B71F621807002FCDE6 /* AssignmentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentTableViewCell.swift; sourceTree = "<group>"; };
+		CA67A6B91F621C7F002FCDE6 /* CreatorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatorTableViewCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CA67A6891F6205D6002FCDE6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CA67A6831F6205D6002FCDE6 = {
+			isa = PBXGroup;
+			children = (
+				CA67A68E1F6205D6002FCDE6 /* Edmodo */,
+				CA67A68D1F6205D6002FCDE6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CA67A68D1F6205D6002FCDE6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CA67A68C1F6205D6002FCDE6 /* Edmodo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CA67A68E1F6205D6002FCDE6 /* Edmodo */ = {
+			isa = PBXGroup;
+			children = (
+				CA67A6B21F6210F0002FCDE6 /* View */,
+				CA67A6B11F6210D7002FCDE6 /* Controller */,
+				CA67A6AC1F620747002FCDE6 /* Model */,
+				CA67A6A91F620649002FCDE6 /* API */,
+				CA67A68F1F6205D6002FCDE6 /* AppDelegate.swift */,
+				CA67A6931F6205D6002FCDE6 /* Main.storyboard */,
+				CA67A6961F6205D6002FCDE6 /* Assets.xcassets */,
+				CA67A6981F6205D6002FCDE6 /* LaunchScreen.storyboard */,
+				CA67A69B1F6205D6002FCDE6 /* Info.plist */,
+			);
+			path = Edmodo;
+			sourceTree = "<group>";
+		};
+		CA67A6A91F620649002FCDE6 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				CA67A6AA1F620659002FCDE6 /* EdmodoClient.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		CA67A6AC1F620747002FCDE6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CA67A6AD1F620764002FCDE6 /* Assignment.swift */,
+				CA67A6AF1F62076D002FCDE6 /* Submission.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CA67A6B11F6210D7002FCDE6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CA67A6B31F62148D002FCDE6 /* AssignmentsViewController.swift */,
+				CA67A6B51F621530002FCDE6 /* AssignmentDetailViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CA67A6B21F6210F0002FCDE6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CA67A6B71F621807002FCDE6 /* AssignmentTableViewCell.swift */,
+				CA67A6B91F621C7F002FCDE6 /* CreatorTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CA67A68B1F6205D6002FCDE6 /* Edmodo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA67A69E1F6205D6002FCDE6 /* Build configuration list for PBXNativeTarget "Edmodo" */;
+			buildPhases = (
+				CA67A6881F6205D6002FCDE6 /* Sources */,
+				CA67A6891F6205D6002FCDE6 /* Frameworks */,
+				CA67A68A1F6205D6002FCDE6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Edmodo;
+			productName = Edmodo;
+			productReference = CA67A68C1F6205D6002FCDE6 /* Edmodo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CA67A6841F6205D6002FCDE6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = BrandonAubrey;
+				TargetAttributes = {
+					CA67A68B1F6205D6002FCDE6 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 68W2B53UFP;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = CA67A6871F6205D6002FCDE6 /* Build configuration list for PBXProject "Edmodo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CA67A6831F6205D6002FCDE6;
+			productRefGroup = CA67A68D1F6205D6002FCDE6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CA67A68B1F6205D6002FCDE6 /* Edmodo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CA67A68A1F6205D6002FCDE6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA67A69A1F6205D6002FCDE6 /* LaunchScreen.storyboard in Resources */,
+				CA67A6971F6205D6002FCDE6 /* Assets.xcassets in Resources */,
+				CA67A6951F6205D6002FCDE6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CA67A6881F6205D6002FCDE6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA67A6BA1F621C7F002FCDE6 /* CreatorTableViewCell.swift in Sources */,
+				CA67A6B61F621530002FCDE6 /* AssignmentDetailViewController.swift in Sources */,
+				CA67A6B01F62076D002FCDE6 /* Submission.swift in Sources */,
+				CA67A6AE1F620764002FCDE6 /* Assignment.swift in Sources */,
+				CA67A6B81F621807002FCDE6 /* AssignmentTableViewCell.swift in Sources */,
+				CA67A6901F6205D6002FCDE6 /* AppDelegate.swift in Sources */,
+				CA67A6AB1F620659002FCDE6 /* EdmodoClient.swift in Sources */,
+				CA67A6B41F62148D002FCDE6 /* AssignmentsViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CA67A6931F6205D6002FCDE6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CA67A6941F6205D6002FCDE6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CA67A6981F6205D6002FCDE6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CA67A6991F6205D6002FCDE6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CA67A69C1F6205D6002FCDE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CA67A69D1F6205D6002FCDE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CA67A69F1F6205D6002FCDE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 68W2B53UFP;
+				INFOPLIST_FILE = Edmodo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = BrandonAubrey.Edmodo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		CA67A6A01F6205D6002FCDE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 68W2B53UFP;
+				INFOPLIST_FILE = Edmodo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = BrandonAubrey.Edmodo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CA67A6871F6205D6002FCDE6 /* Build configuration list for PBXProject "Edmodo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA67A69C1F6205D6002FCDE6 /* Debug */,
+				CA67A69D1F6205D6002FCDE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA67A69E1F6205D6002FCDE6 /* Build configuration list for PBXNativeTarget "Edmodo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA67A69F1F6205D6002FCDE6 /* Debug */,
+				CA67A6A01F6205D6002FCDE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CA67A6841F6205D6002FCDE6 /* Project object */;
+}
