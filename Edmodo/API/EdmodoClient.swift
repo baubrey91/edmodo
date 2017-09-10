@@ -11,10 +11,10 @@ import Foundation
 fileprivate let baseURL = "https://api.edmodo.com/"
 fileprivate let assignmentsBaseURL = "assignments?"
 fileprivate let submissionsBaseURL = "assignment_submissions?"
+fileprivate let assignmentIDurl = "assignment_id="
+fileprivate let creatorIDurl = "&assignment_creator_id="
 fileprivate let tokenURL = "access_token="
 fileprivate let accessToken = "12e7eaf1625004b7341b6d681fa3a7c1c551b5300cf7f7f3a02010e99c84695d"
-
-//https://api.edmodo.com/assignment_submissions?assignment_id=24800159&assignment_creator_id=73240721&access_token=12e7eaf1625004b7341b6d681fa3a7c1c551b5300cf7f7f3a02010e99c84695d
 
 enum Endpoint {
     case getAssignments(token: String)
@@ -25,19 +25,14 @@ enum Endpoint {
         case .getAssignments(let token):
             return baseURL + assignmentsBaseURL + tokenURL + token
         case .getSubmissions(let assignmentID, let creatorID, let token):
-            return baseURL + submissionsBaseURL + "assignment_id=" + assignmentID + "&assignment_creator_id=" + creatorID + "&" + tokenURL + token
+            return baseURL + submissionsBaseURL + assignmentIDurl + assignmentID + "&" + creatorIDurl + creatorID + "&" + tokenURL + token
         }
     }
 }
 
-class EdmodoClient {
-    var token: String!
-    
-    static let sharedInstance = EdmodoClient(token: accessToken)
-    
-    init(token: String) {
-        self.token = token
-    }
+//I have two api calls. One with no parameters and one that takes parameters
+class EdmodoClient {    
+    static let sharedInstance = EdmodoClient()
     
     fileprivate let session = URLSession.shared
     
@@ -52,7 +47,7 @@ class EdmodoClient {
                                             else if let data = data {
                                                 let jsonData = (try? JSONSerialization.jsonObject(with: data,
                                                                                                   options: JSONSerialization.ReadingOptions.allowFragments)) as? [payload]
-                                                completionHandler(jsonData)
+                                                completionHandler(jsonData ?? nil)
                                                 
                                             }
                                             self.session.invalidateAndCancel()
@@ -77,7 +72,7 @@ class EdmodoClient {
                                             else if let data = data {
                                                 let jsonData = (try? JSONSerialization.jsonObject(with: data,
                                                                                                   options: JSONSerialization.ReadingOptions.allowFragments)) as? [payload]
-                                                completionHandler(jsonData)
+                                                completionHandler(jsonData ?? nil)
                                                 
                                             }
                                             self.session.invalidateAndCancel()

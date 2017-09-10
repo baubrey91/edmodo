@@ -23,6 +23,7 @@ class Assignment  {
         self.creator = Creator(jsonDic["creator"] as! payload)
     }
     
+    //returns array of assignments
     class func assignments(array: [payload]) -> [Assignment] {
         var assignments = [Assignment]()
         for jsonDic in array {

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3966BB891F625A3B0026F2AF /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3966BB881F625A3B0026F2AF /* Reachability.swift */; };
 		3966BB8B1F625D210026F2AF /* NewAssignmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3966BB8A1F625D210026F2AF /* NewAssignmentViewController.swift */; };
+		39B2E8361F63787E00EEC6C5 /* InfiniteScrollActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B2E8351F63787E00EEC6C5 /* InfiniteScrollActivityView.swift */; };
+		39B2E8381F63806F00EEC6C5 /* Creator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B2E8371F63806F00EEC6C5 /* Creator.swift */; };
 		CA67A6901F6205D6002FCDE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA67A68F1F6205D6002FCDE6 /* AppDelegate.swift */; };
 		CA67A6951F6205D6002FCDE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA67A6931F6205D6002FCDE6 /* Main.storyboard */; };
 		CA67A6971F6205D6002FCDE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA67A6961F6205D6002FCDE6 /* Assets.xcassets */; };
@@ -27,6 +29,8 @@
 /* Begin PBXFileReference section */
 		3966BB881F625A3B0026F2AF /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		3966BB8A1F625D210026F2AF /* NewAssignmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewAssignmentViewController.swift; sourceTree = "<group>"; };
+		39B2E8351F63787E00EEC6C5 /* InfiniteScrollActivityView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfiniteScrollActivityView.swift; sourceTree = "<group>"; };
+		39B2E8371F63806F00EEC6C5 /* Creator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Creator.swift; sourceTree = "<group>"; };
 		CA67A68C1F6205D6002FCDE6 /* Edmodo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Edmodo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA67A68F1F6205D6002FCDE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA67A6941F6205D6002FCDE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -101,6 +105,7 @@
 			children = (
 				CA67A6AD1F620764002FCDE6 /* Assignment.swift */,
 				CA67A6AF1F62076D002FCDE6 /* Submission.swift */,
+				39B2E8371F63806F00EEC6C5 /* Creator.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -122,6 +127,7 @@
 				CA67A6B71F621807002FCDE6 /* AssignmentTableViewCell.swift */,
 				CA67A6B91F621C7F002FCDE6 /* CreatorTableViewCell.swift */,
 				CA67A6BB1F6334F7002FCDE6 /* CustomImageView.swift */,
+				39B2E8351F63787E00EEC6C5 /* InfiniteScrollActivityView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -200,10 +206,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA67A6BA1F621C7F002FCDE6 /* CreatorTableViewCell.swift in Sources */,
+				39B2E8361F63787E00EEC6C5 /* InfiniteScrollActivityView.swift in Sources */,
 				CA67A6BE1F633655002FCDE6 /* SubmissionDetailViewController.swift in Sources */,
 				CA67A6B61F621530002FCDE6 /* AssignmentDetailViewController.swift in Sources */,
 				CA67A6B01F62076D002FCDE6 /* Submission.swift in Sources */,
 				CA67A6AE1F620764002FCDE6 /* Assignment.swift in Sources */,
+				39B2E8381F63806F00EEC6C5 /* Creator.swift in Sources */,
 				CA67A6B81F621807002FCDE6 /* AssignmentTableViewCell.swift in Sources */,
 				3966BB891F625A3B0026F2AF /* Reachability.swift in Sources */,
 				3966BB8B1F625D210026F2AF /* NewAssignmentViewController.swift in Sources */,

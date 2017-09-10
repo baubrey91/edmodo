@@ -17,7 +17,7 @@ class CreatorTableViewCell: UITableViewCell {
     var submission: Submission? {
         didSet{
             self.nameLabel.text = submission?.creator.firstName
-            self.turnedInLabel.text = submission?.submittedAt.formatDate(due: false)
+            self.turnedInLabel.text = submission?.submittedAt.formatDateFromServer(due: false)
             if let imgString = submission?.creator.avatar {
                 avaterImage.loadImage(urlString: imgString)
             }

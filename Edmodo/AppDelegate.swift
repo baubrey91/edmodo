@@ -19,10 +19,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         return true
     }
-
-    func applicationDidBecomeActive(_ application: UIApplication) {
-        //data is reloaded upon re-opening application
-        NotificationCenter.default.post(name: NSNotification.Name.UIApplicationDidBecomeActive, object:nil)
-    }
 }
 
