@@ -188,13 +188,13 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="activityIndicator" destination="gZA-h8-tw7" id="jdW-ss-wUi"/>
-                        <outlet property="tableView" destination="azT-Zq-dAK" id="aMP-V1-IKa"/>
+                        <outlet property="activityIndicator" destination="gZA-h8-tw7" id="rXD-4W-Y2W"/>
+                        <outlet property="tableView" destination="azT-Zq-dAK" id="QTJ-q5-Hff"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1078" y="115"/>
+            <point key="canvasLocation" x="1078" y="133"/>
         </scene>
         <!--Assignment Detail View Controller-->
         <scene sceneID="8iw-hj-hBI">
@@ -293,9 +293,9 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="AZ3-uB-iHe"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="activityIndicator" destination="eH6-t2-RGa" id="VGD-qY-w2f"/>
+                        <outlet property="activityIndicator" destination="eH6-t2-RGa" id="PS4-O4-bHm"/>
                         <outlet property="descriptionLabel" destination="lcZ-0K-s8z" id="n6D-HT-RGP"/>
-                        <outlet property="tableView" destination="x0g-D9-gmg" id="ICC-vh-rJl"/>
+                        <outlet property="tableView" destination="x0g-D9-gmg" id="lwt-Ec-1Ra"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XKj-fp-iau" userLabel="First Responder" sceneMemberID="firstResponder"/>

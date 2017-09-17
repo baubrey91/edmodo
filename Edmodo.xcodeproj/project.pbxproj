@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3909C5E51F6E009000134E72 /* AssignmentsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3909C5E41F6E009000134E72 /* AssignmentsViewModel.swift */; };
+		3909C5E71F6E128700134E72 /* AssignmentDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3909C5E61F6E128700134E72 /* AssignmentDetailViewModel.swift */; };
+		3909C5E91F6E12F000134E72 /* TableViewBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3909C5E81F6E12F000134E72 /* TableViewBase.swift */; };
 		3966BB891F625A3B0026F2AF /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3966BB881F625A3B0026F2AF /* Reachability.swift */; };
 		3966BB8B1F625D210026F2AF /* NewAssignmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3966BB8A1F625D210026F2AF /* NewAssignmentViewController.swift */; };
 		39B2E8361F63787E00EEC6C5 /* InfiniteScrollActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B2E8351F63787E00EEC6C5 /* InfiniteScrollActivityView.swift */; };
@@ -27,6 +30,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3909C5E41F6E009000134E72 /* AssignmentsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentsViewModel.swift; sourceTree = "<group>"; };
+		3909C5E61F6E128700134E72 /* AssignmentDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentDetailViewModel.swift; sourceTree = "<group>"; };
+		3909C5E81F6E12F000134E72 /* TableViewBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewBase.swift; sourceTree = "<group>"; };
 		3966BB881F625A3B0026F2AF /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		3966BB8A1F625D210026F2AF /* NewAssignmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewAssignmentViewController.swift; sourceTree = "<group>"; };
 		39B2E8351F63787E00EEC6C5 /* InfiniteScrollActivityView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfiniteScrollActivityView.swift; sourceTree = "<group>"; };
@@ -59,6 +65,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3909C5E31F6E005500134E72 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3909C5E41F6E009000134E72 /* AssignmentsViewModel.swift */,
+				3909C5E61F6E128700134E72 /* AssignmentDetailViewModel.swift */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
 		CA67A6831F6205D6002FCDE6 = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +93,7 @@
 		CA67A68E1F6205D6002FCDE6 /* Edmodo */ = {
 			isa = PBXGroup;
 			children = (
+				3909C5E31F6E005500134E72 /* ViewModel */,
 				CA67A6B21F6210F0002FCDE6 /* View */,
 				CA67A6B11F6210D7002FCDE6 /* Controller */,
 				CA67A6AC1F620747002FCDE6 /* Model */,
@@ -116,6 +132,7 @@
 				CA67A6B31F62148D002FCDE6 /* AssignmentsViewController.swift */,
 				CA67A6B51F621530002FCDE6 /* AssignmentDetailViewController.swift */,
 				3966BB8A1F625D210026F2AF /* NewAssignmentViewController.swift */,
+				3909C5E81F6E12F000134E72 /* TableViewBase.swift */,
 				CA67A6BD1F633655002FCDE6 /* SubmissionDetailViewController.swift */,
 			);
 			path = Controller;
@@ -209,6 +226,7 @@
 				39B2E8361F63787E00EEC6C5 /* InfiniteScrollActivityView.swift in Sources */,
 				CA67A6BE1F633655002FCDE6 /* SubmissionDetailViewController.swift in Sources */,
 				CA67A6B61F621530002FCDE6 /* AssignmentDetailViewController.swift in Sources */,
+				3909C5E51F6E009000134E72 /* AssignmentsViewModel.swift in Sources */,
 				CA67A6B01F62076D002FCDE6 /* Submission.swift in Sources */,
 				CA67A6AE1F620764002FCDE6 /* Assignment.swift in Sources */,
 				39B2E8381F63806F00EEC6C5 /* Creator.swift in Sources */,
@@ -216,7 +234,9 @@
 				3966BB891F625A3B0026F2AF /* Reachability.swift in Sources */,
 				3966BB8B1F625D210026F2AF /* NewAssignmentViewController.swift in Sources */,
 				CA67A6BC1F6334F7002FCDE6 /* CustomImageView.swift in Sources */,
+				3909C5E91F6E12F000134E72 /* TableViewBase.swift in Sources */,
 				CA67A6901F6205D6002FCDE6 /* AppDelegate.swift in Sources */,
+				3909C5E71F6E128700134E72 /* AssignmentDetailViewModel.swift in Sources */,
 				CA67A6AB1F620659002FCDE6 /* EdmodoClient.swift in Sources */,
 				CA67A6B41F62148D002FCDE6 /* AssignmentsViewController.swift in Sources */,
 			);
