@@ -20,12 +20,11 @@ class AssignmentDetailViewController: TableViewBase {
     
     //MARK:- VIEW LIFECYCLE
     override func viewDidLoad() {
-        setupTableView()
+        setupTableView(selector: #selector(refresh(refreshControl:)))
         configureInfinteScroll()
         viewModel = AssignmentDetailViewModel(id: String(describing: assignment.id),
                                               creatorId: String(describing: assignment.creator.id))
         viewModel.delegate = self
-
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -43,13 +42,7 @@ class AssignmentDetailViewController: TableViewBase {
     }
     
     //TableView Configuration
-    fileprivate func setupTableView() {
-        let refreshControlTable = UIRefreshControl()
-        refreshControlTable.addTarget(self, action: #selector(refresh(refreshControl:)), for: UIControlEvents.valueChanged)
-        tableView.insertSubview(refreshControlTable, at: 0)
-        tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 120
-    }
+
     
     func refresh(refreshControl: UIRefreshControl) {
         refreshControl.beginRefreshing()
@@ -60,7 +53,7 @@ class AssignmentDetailViewController: TableViewBase {
         if Reachability.isConnectedToNetwork() {
             viewModel.getSubmissions(dataCall: dataCall)
         } else {
-            self.navigationItem.prompt = "Please Check Your internet connection"
+            self.navigationItem.prompt = Warnings.noInternet
         }
     }
 }
@@ -72,7 +65,7 @@ extension AssignmentDetailViewController: UITableViewDataSource, UITableViewDele
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "creatorCell", for: indexPath) as! CreatorTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Cells.creator, for: indexPath) as! CreatorTableViewCell
         cell.submission = viewModel.submissions[indexPath.row]
         return cell
     }
@@ -92,7 +85,7 @@ extension AssignmentDetailViewController: UITableViewDataSource, UITableViewDele
                                    height: InfiniteScrollActivityView.defaultHeight)
                 loadingMoreView?.frame = frame
                 loadingMoreView!.startAnimating()
-                viewModel.getSubmissions(dataCall: .append)
+                checkInternetAndProceed(dataCall: .append)
             }
         }
     }

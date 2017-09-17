@@ -24,11 +24,11 @@ class AssignmentsViewController: TableViewBase {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "assignmentDetailSegue" {
+        if segue.identifier == Segues.detail {
             let vc = segue.destination as! AssignmentDetailViewController
             let indexPath = tableView.indexPath(for: sender as! AssignmentTableViewCell)!
             vc.assignment = viewModel.assignments[indexPath.row]
-        } else if segue.identifier == "newAssignmentSegue" {
+        } else if segue.identifier == Segues.newAssignment {
             let navigationController = segue.destination as! UINavigationController
             let vc = navigationController.topViewController as! NewAssignmentViewController
             vc.delegate = self
@@ -44,7 +44,7 @@ class AssignmentsViewController: TableViewBase {
         if Reachability.isConnectedToNetwork() {
             viewModel.getAssignments(dataCall: dataCall)
         } else {
-            self.navigationItem.prompt = "Please Check Your internet connection"
+            self.navigationItem.prompt = Warnings.noInternet
         }
     }
 }
@@ -56,7 +56,7 @@ extension AssignmentsViewController: UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "assignmentCell", for: indexPath) as! AssignmentTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Cells.assignment, for: indexPath) as! AssignmentTableViewCell
         cell.assignment = viewModel.assignments[indexPath.row]
         return cell
     }

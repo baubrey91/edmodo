@@ -11,10 +11,10 @@ import UIKit
 
 class TableViewBase: UIViewController {
     
+    let refreshControlTable = UIRefreshControl()
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
-    let refreshControlTable = UIRefreshControl()
     var isMoreDataLoading = false
     var loadingMoreView: InfiniteScrollActivityView?
     
