@@ -85,6 +85,7 @@ extension AssignmentsViewController: UITableViewDelegate, UITableViewDataSource 
 extension AssignmentsViewController: newAssignmentDelegate {
     func newAssignment(newAssignmentViewController: NewAssignmentViewController, assignment: Assignment) {
         viewModel.assignments.append(assignment)
+        tableView.reloadData()
     }
 }
 

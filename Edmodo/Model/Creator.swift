@@ -24,7 +24,7 @@ class Creator {
     init(_ dic: payload) {
         self.firstName = dic["first_name"] as! String
         self.lastName = dic["last_name"] as! String
-        self.id = dic["id"] as! Int ?? -1
+        self.id = dic["id"] as? Int ?? -1
         if let avatar = dic["avatars"] as? payload {
             self.avatar = avatar["large"] as? String
         }

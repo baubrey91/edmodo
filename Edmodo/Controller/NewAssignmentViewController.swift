@@ -34,9 +34,7 @@ class NewAssignmentViewController: UIViewController {
                                 "last_name": User.loggedIn.lastName,
                                 "id": User.loggedIn.id,
                                 "avatars":avator]
-        
-        print(datePicker.date)
-        
+                
         let dic: payload = ["title": titleTF.text,
                    "description": assignmentTextView.text,
                    "due_at": datePicker.date.description.formatDateFromPicker(),
