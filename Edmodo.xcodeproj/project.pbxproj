@@ -73,7 +73,7 @@
 				3909C5E41F6E009000134E72 /* AssignmentsViewModel.swift */,
 				3909C5E61F6E128700134E72 /* AssignmentDetailViewModel.swift */,
 			);
-			name = ViewModel;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		CA67A6831F6205D6002FCDE6 = {
